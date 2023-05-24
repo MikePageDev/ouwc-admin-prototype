@@ -1,0 +1,7 @@
+name: ourc-admin
+services:
+  appserver:
+    type: nginx
+proxy:
+  appserver:
+  - ourc-admin.lndo.site
