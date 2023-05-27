@@ -55,10 +55,20 @@ ul {
     font-size: 1.5rem;
 }
 
+/* Hide mobile logo */
+#mobile-logo {
+    display: none;
+}
+
 #nav-items {
     display:flex;
     justify-content: space-between;
     width: 40%;
+}
+
+/* Hide mobile menu */
+#mobile-menu {
+    display: none;
 }
 
 #nav-items .active {
@@ -123,4 +133,68 @@ form {
     width: 25%;
     justify-content: space-between;
     padding-bottom: 20px
+}
+
+/* Mobile layout */
+@media screen and (max-width: 375px) {
+    /* Hide desktop logo */
+    #logo {
+        display: none;
+    }
+
+    /* Hide desktop menu */
+    #nav-items {
+        display: none;
+    }
+
+    /* Hide the logout button */
+    #log-out {
+        display: none;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    /* Nav bar modile styling */
+    #nav-bar {
+        padding: 0 25px;
+        height: unset;
+    }
+
+    #mobile-logo {
+        font-weight: bold;
+        display: block;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+
+    main {
+        padding: unset;
+        min-height: calc(100vh - 50px)
+    }
+
+    #main-card {
+        min-height: calc(100vh - 50px);
+    }
+
+    .form-group {
+        flex-direction: column;
+        padding-bottom: 10px
+    }
+
+    #subject-group {
+        width: unset;
+    }
+
+    #buttons {
+        width: unset;
+        justify-content: space-around;
+    }
+
+    .button {
+        padding: 20px 25px;
+    }
 }
