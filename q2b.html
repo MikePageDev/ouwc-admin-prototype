@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="Michael Page mp23564">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="q2b.css">
+  <title>OUWC-admin Announcements</title>
+</head>
+<body>
+  <nav id="nav-bar">
+    <a id="logo" href="#">
+      <p>OU Walking Club Admin</p>
+    </a>
+    <a id="mobile-logo" href="#">
+      <p>OUWC Admin</p>
+    </a>
+    <ul id="nav-items">
+      <li><a id="nav-item-walk" href="#">Walks</a></li>
+      <li><a id="nav-item-social" href="#">Social</a></li>
+      <li><a id="nav-item-members" href="#">Members</a></li>
+      <li><a id="nav-item-news" href="#">News</a></li>
+      <li><a id="nav-item-announcements" href="#" class="active">Announcements</a></li>
+    </ul>
+    <div id="mobile-menu">
+      <p>Menu</p>
+    </div>
+    <div id="log-out"><a id="log-out-link">log out</a></div>
+  </nav>
+  <main>
+    <div id="main-card">
+      <header>
+        <h1>Create</h1>
+      </header>
+      <form id="form" method="POST" action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" enctype="multipart/form-data">
+        <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
+        <div class="row">
+          <div id="subject-group" class="form-group">
+            <label for="subject">Subject:</label>
+            <input id="subject" type="text" name="subject" required>
+          </div>
+          <div id="admin-group" class="form-group">
+            <label for="admin">Admin Name:</label>
+            <input id="admin" type="text" name="admin" required>
+          </div>
+          <div id="email-date-group" class="form-group">
+            <label for="email-date">Email Date:</label>
+            <input id="email-date" type="date" name="email-date" required>
+          </div>
+        </div>
+        <div id="attachment-group" class="form-group">
+          <label for="attachment">Attachment:</label>
+          <input id="attachment" type="file" name="attachment">
+        </div>
+        <div id="body-group" class="form-group">
+          <label for="body">Body:</label>
+          <textarea id="body" name="body" required></textarea>
+        </div>
+        <div id="buttons">
+          <input type="submit" id="save" value="save" class="button">
+          <a id="cancel" href="#" class="button">cancel</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
